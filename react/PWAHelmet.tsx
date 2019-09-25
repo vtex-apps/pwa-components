@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import PropTypes from 'prop-types'
 
 import { Helmet, useRuntime } from "vtex.render-runtime"
 
-export interface Props {
-  appId: string
+const propTypes = {
+  appId: PropTypes.string.isRequired
 }
 
-const PWAHelmet = ({ appId }: Props) => {
+type Props = PropTypes.InferProps<typeof propTypes>
+
+const PWAHelmet: FC<Props> = ({ appId }) => {
   const { rootPath = '' } = useRuntime()
 
   return (
@@ -35,8 +37,6 @@ const PWAHelmet = ({ appId }: Props) => {
   )
 }
 
-PWAHelmet.propTypes = {
-  appId: PropTypes.string
-}
+PWAHelmet.propTypes = propTypes
 
 export default PWAHelmet
