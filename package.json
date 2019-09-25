@@ -1,6 +1,6 @@
 {
   "name": "vtex.pwa-components",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Components related to PWA features",
   "devDependencies": {
     "@types/node": "^12.7.7",
