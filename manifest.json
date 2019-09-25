@@ -1,0 +1,17 @@
+{
+  "name": "pwa-components",
+  "title": "PWA Components",
+  "vendor": "vtex",
+  "version": "1.0.0",
+  "description": "Componentes related with PWA features",
+  "dependencies": {
+    "vtex.pwa-graphql": "1.x"
+  },
+  "builders": {
+    "react": "3.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
