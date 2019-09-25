@@ -1,0 +1,14 @@
+{
+  "name": "vtex.pwa-components",
+  "version": "0.1.0",
+  "description": "Components related to PWA features",
+  "devDependencies": {
+    "@types/node": "^12.7.7",
+    "@vtex/tsconfig": "^0.3.0",
+    "eslint": "^6.4.0",
+    "eslint-config-vtex": "^11.1.0",
+    "eslint-config-vtex-react": "^5.0.1",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
+  }
+}
