@@ -1,5 +1,5 @@
 {
-  "name": "pwa-components",
+  "name": "vtex.pwa-components",
   "version": "1.0.0",
   "description": "Componentes related with PWA features",
   "devDependencies": {
