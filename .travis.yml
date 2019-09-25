@@ -16,7 +16,7 @@ matrix:
         - yarn install
         - yarn install --cwd react
       script:
-        - yarn --cwd node test
+        - yarn --cwd react test
     - node_js: 12
       env: TEST_SUIT=lint
       install:
