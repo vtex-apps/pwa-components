@@ -18,6 +18,7 @@
     "vtex.render-runtime": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.66.2/public/@types/vtex.render-runtime"
   },
   "dependencies": {
-    "react": "^16.9.0"
+    "react": "^16.9.0",
+    "react-intl": "^3.3.2"
   }
 }
