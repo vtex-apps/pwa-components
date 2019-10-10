@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import PropTypes from 'prop-types'
 import { injectIntl, InjectedIntlProps } from 'react-intl'
+import { openDB } from 'idb'
 
 import { Button } from 'vtex.styleguide'
 import { usePWA } from 'vtex.store-resources/PWAContext'
@@ -13,7 +14,12 @@ const propTypes = {
 type Props = PropTypes.InferProps<typeof propTypes>
 
 const PromotionBanner: FC<Props & InjectedIntlProps> = ({ intl, type = 'install' }) => {
-  const { showInstallPrompt } = usePWA() || {}
+  const { showInstallPrompt = null } = usePWA() || {}
+
+  const handleDismiss = async () => {
+    const db = await openDB('webApp', 1)
+    await db.put('webApp', {name: "appInstallDismissed", value: true}) 
+  }
 
   return (
     <div className="pa6 br2 bg-muted-5 mb8 mw5 w-80-ns w-90 center fr-l">
@@ -26,9 +32,7 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({ intl, type = 'install'
         })}
       </p>
       <Button
-        onClick={() => {
-          window && window.localStorage.setItem('appInstallDismissed', 'true')
-        }}
+        onClick={handleDismiss}
         variation="tertiary"
         size="small"
       >
