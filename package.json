@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Components related to PWA features",
   "scripts": {
-    "lint": "tsc --noEmit -p react && eslint --ext ts,tsx react"
+    "lint": "tsc --noEmit -p react && eslint --ext ts,tsx react",
+    "lint:fix": "tsc --noEmit -p react && eslint --ext ts,tsx react --fix"
   },
   "devDependencies": {
     "@types/node": "^12.7.7",
