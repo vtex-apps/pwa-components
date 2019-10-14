@@ -11,7 +11,7 @@ import { usePWA } from 'vtex.store-resources/PWAContext'
 import setWebAppData from './utils/webAppIndexedDB'
 
 const propTypes = {
-  intl: intlShape.isRequired,
+  intl: intlShape,
   type: PropTypes.oneOf(['install', 'push-notification']),
 }
 
@@ -57,7 +57,7 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
       <p className="t-body">
         {intl.formatMessage({
           id:
-            type === 'install'
+            type === CONSTANTS.TYPE_INSTALL
               ? CONSTANTS.INSTALL_TITLE
               : CONSTANTS.PUSH_NOTIFICATION_TITLE,
         })}
@@ -65,7 +65,7 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
       <p className="t-small c-muted-1">
         {intl.formatMessage({
           id:
-            type === 'install'
+            type === CONSTANTS.TYPE_INSTALL
               ? CONSTANTS.INSTALL_DESCRIPTION
               : CONSTANTS.PUSH_NOTIFICATION_DESCRIPTION,
         })}
@@ -78,7 +78,7 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
       <Button onClick={handleAccept} size="small">
         {intl.formatMessage({
           id:
-            type === 'install'
+            type === CONSTANTS.TYPE_INSTALL
               ? CONSTANTS.INSTALL_ACCEPT_BUTTON_LABEL
               : CONSTANTS.PUSH_NOTIFICATIONS_ACCEPT_BUTTON_LABEL,
         })}

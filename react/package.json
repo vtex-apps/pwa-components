@@ -16,12 +16,12 @@
     "prop-types": "^15.7.2",
     "vtex.pwa-graphql": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.pwa-graphql@1.10.0/public/@types/vtex.pwa-graphql",
     "vtex.render-runtime": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.66.2/public/@types/vtex.render-runtime",
-    "vtex.styleguide": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.styleguide@9.87.2/public/@types/vtex.styleguide",
-    "vtex.store-resources": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-resources@0.30.0/public/@types/vtex.store-resources"
+    "vtex.store-resources": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-resources@0.30.0/public/@types/vtex.store-resources",
+    "vtex.styleguide": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.styleguide@9.87.2/public/@types/vtex.styleguide"
   },
   "dependencies": {
     "idb": "^4.0.5",
     "react": "^16.9.0",
-    "react-intl": "^3.3.2"
+    "react-intl": "2.8.0"
   }
 }
