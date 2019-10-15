@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-10-15
+
 ### Fixed
 - Error when `WebApp` database was never opened before in `utils/webAppIndexedDB.ts`.
 
