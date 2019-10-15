@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- Error when `WebApp` database was never opened before in `utils/webAppIndexedDB.ts`.
+
 ## [0.2.0] - 2019-10-14
+### Added
+- `PromotionBanner` component.
 
 ## [0.1.0] - 2019-09-25
 ### Added
