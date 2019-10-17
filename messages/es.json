@@ -5,5 +5,9 @@
   "store/promotion-banner.install.button-accept.label": "Instalar",
   "store/promotion-banner.push-notification.title": "Lleve un registro de sus pedidos",
   "store/promotion-banner.push-notification.description": "Reciba notificaciones sobre el estado de sus pedidos",
-  "store/promotion-banner.push-notification.button-accept.label": "Aceptar"
+  "store/promotion-banner.push-notification.button-accept.label": "Aceptar",
+  "store/store.network-status.offline": "Sin conexión a internet.",
+  "store/store.offline-warning.button": "Actualizar",
+  "store/store.offline-warning.title": "Esta página no se puede cargar.",
+  "store/store.offline-warning.message": "No se puede cargar esta página. Comprueba tu conexión de red"
 }

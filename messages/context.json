@@ -5,5 +5,9 @@
   "store/promotion-banner.install.button-accept.label": "store/promotion-banner.install.button-accept.label",
   "store/promotion-banner.push-notification.title": "store/promotion-banner.push-notification.title",
   "store/promotion-banner.push-notification.description": "store/promotion-banner.push-notification.description",
-  "store/promotion-banner.push-notification.button-accept.label": "store/promotion-banner.push-notification.button-accept.label"
+  "store/promotion-banner.push-notification.button-accept.label": "store/promotion-banner.push-notification.button-accept.label",
+  "store/store.network-status.offline": "store/store.network-status.offline",
+  "store/store.offline-warning.title": "store/store.offline-warning.title",
+  "store/store.offline-warning.button": "store/store.offline-warning.button",
+  "store/store.offline-warning.message": "store/store.offline-warning.message"
 }
