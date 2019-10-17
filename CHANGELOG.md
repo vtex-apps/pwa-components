@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- `OfflineWarning` to be used as a offline page.
+- `OfflineWarning` to be used on the offline page.
 
 ## [0.2.1] - 2019-10-15
 

@@ -6,8 +6,7 @@
   "store/promotion-banner.push-notification.title": "Acompanhe seus pedidos",
   "store/promotion-banner.push-notification.description": "Receba notificações sobre os status do seus pedidos.",
   "store/promotion-banner.push-notification.button-accept.label": "Aceitar",
-  "store/store.network-status.offline": "Sem conexão à internet.",
-  "store/store.offline-warning.button": "Atualizar",
-  "store/store.offline-warning.title": "Esta página não pode ser carregada",
-  "store/store.offline-warning.message": "Não é possível carregar está página. Verifique sua conexão de rede"
+  "store/offline-warning.button": "Atualizar",
+  "store/offline-warning.message": "Não é possível carregar está página. Verifique sua conexão de rede",
+  "store/offline-warning.title": "Esta página não pode ser carregada"
 }
