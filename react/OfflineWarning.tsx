@@ -9,18 +9,18 @@ const propTypes = {
 
 type Props = PropTypes.InferProps<typeof propTypes>
 
-const OfflineWarning:  FC<Props & InjectedIntlProps> = ({ intl }) => {
+const OfflineWarning: FC<Props & InjectedIntlProps> = ({ intl }) => {
   const handleReload = () => {
-    if(window && window.location) {
+    if (window && window.location) {
       window.location.reload()
     }
   }
 
   return (
-    <EmptyState title={intl.formatMessage({ id: 'store/offline-warning.title' })}>
-      <p>
-        {intl.formatMessage({ id: 'store/offline-warning.message' })}
-      </p>
+    <EmptyState
+      title={intl.formatMessage({ id: 'store/offline-warning.title' })}
+    >
+      <p>{intl.formatMessage({ id: 'store/offline-warning.message' })}</p>
       <div className="pt5">
         <Button variation="secondary" size="small" onClick={handleReload}>
           <span className="flex align-baseline">
