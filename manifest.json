@@ -2,7 +2,7 @@
   "name": "pwa-components",
   "title": "PWA Components",
   "vendor": "vtex",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Components related to PWA features",
   "dependencies": {
     "vtex.pwa-graphql": "1.x",
