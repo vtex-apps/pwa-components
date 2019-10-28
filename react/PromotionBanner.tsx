@@ -13,6 +13,7 @@ import setWebAppData from './utils/webAppIndexedDB'
 const propTypes = {
   intl: intlShape,
   type: PropTypes.oneOf(['install', 'push-notification']),
+  onDismiss: PropTypes.func,
 }
 
 const CONSTANTS = {
@@ -37,6 +38,7 @@ type Props = PropTypes.InferProps<typeof propTypes>
 const PromotionBanner: FC<Props & InjectedIntlProps> = ({
   intl,
   type = 'install',
+  onDismiss,
 }) => {
   const { showInstallPrompt = null } = usePWA() || {}
 
@@ -44,7 +46,11 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
     if (type === CONSTANTS.TYPE_INSTALL)
       setWebAppData(CONSTANTS.INSTALL_DISMISS_DB_NAME)
     else setWebAppData(CONSTANTS.PUSH_NOTIFICAION_DISMISS_DB_NAME)
-  }, [type])
+
+    if (onDismiss) {
+      onDismiss()
+    }
+  }, [type, onDismiss])
 
   const handleAccept = useCallback(() => {
     if (type === CONSTANTS.TYPE_INSTALL) {
