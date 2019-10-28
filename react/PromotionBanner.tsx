@@ -47,10 +47,10 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
       setWebAppData(CONSTANTS.INSTALL_DISMISS_DB_NAME)
     else setWebAppData(CONSTANTS.PUSH_NOTIFICAION_DISMISS_DB_NAME)
 
-    if(onDismiss) {
+    if (onDismiss) {
       onDismiss()
     }
-  }, [type])
+  }, [type, onDismiss])
 
   const handleAccept = useCallback(() => {
     if (type === CONSTANTS.TYPE_INSTALL) {
