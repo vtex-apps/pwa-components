@@ -11,6 +11,7 @@ VTEX PWA Components is a collection of components PWA-related.
 ## Table of Contents
 
 - [Usage](#Usage)
+- [Components Specs](#components-specs)
 
 ## Usage
 
@@ -20,7 +21,7 @@ To use this app, you need to import in your dependencies on `manifest.json`.
 
 ```json
   "dependencies": {
-    "vtex.pwa-components": "3.x"
+    "vtex.pwa-components": "0.x"
   }
 ```
 
