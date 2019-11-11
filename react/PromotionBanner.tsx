@@ -8,8 +8,6 @@ import { Button } from 'vtex.styleguide'
 // @ts-ignore
 import { usePWA } from 'vtex.store-resources/PWAContext'
 
-import setWebAppData from './utils/webAppIndexedDB'
-
 const propTypes = {
   intl: intlShape,
   type: PropTypes.oneOf(['install', 'push-notification']),
@@ -19,8 +17,6 @@ const propTypes = {
 const CONSTANTS = {
   TYPE_INSTALL: 'install',
   TYPE_PUSH_NOTIFICATION: 'push-notification',
-  INSTALL_DISMISS_DB_NAME: 'appInstallDismissed',
-  PUSH_NOTIFICAION_DISMISS_DB_NAME: 'pushNotificationsDismissed',
   INSTALL_TITLE: 'store/promotion-banner.install.title',
   INSTALL_DESCRIPTION: 'store/promotion-banner.install.description',
   INSTALL_ACCEPT_BUTTON_LABEL:
@@ -44,8 +40,8 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
 
   const handleDismiss = useCallback(async () => {
     if (type === CONSTANTS.TYPE_INSTALL)
-      setWebAppData(CONSTANTS.INSTALL_DISMISS_DB_NAME)
-    else setWebAppData(CONSTANTS.PUSH_NOTIFICAION_DISMISS_DB_NAME)
+      localStorage.setItem('webAppInstallDismissed', 'true')
+    else localStorage.setItem('pushNotificationsDismissed', 'true')
 
     if (onDismiss) {
       onDismiss()
