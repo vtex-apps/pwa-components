@@ -1,12 +1,15 @@
 import React, { FC, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { injectIntl, InjectedIntlProps, intlShape } from 'react-intl'
+import { useQuery } from 'react-apollo'
 
 // @ts-ignore
 import { Button } from 'vtex.styleguide'
 
 // @ts-ignore
 import { usePWA } from 'vtex.store-resources/PWAContext'
+
+import firebaseDataQuery from './graphql/firebaseData.graphql'
 
 const propTypes = {
   intl: intlShape,
@@ -31,12 +34,18 @@ const CONSTANTS = {
 
 type Props = PropTypes.InferProps<typeof propTypes>
 
+const useFirebase = () => {
+  const { data, loading, error } = useQuery(firebaseDataQuery)
+  return !loading && data && !error ? firebaseDataQuery : null
+}
+
 const PromotionBanner: FC<Props & InjectedIntlProps> = ({
   intl,
   type = 'install',
   onDismiss,
 }) => {
   const { showInstallPrompt = null } = usePWA() || {}
+  const { data, loading, error } = useQuery(firebaseDataQuery)
 
   const handleDismiss = useCallback(async () => {
     if (type === CONSTANTS.TYPE_INSTALL)
@@ -51,7 +60,8 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
   const handleAccept = useCallback(() => {
     if (type === CONSTANTS.TYPE_INSTALL) {
       showInstallPrompt()
-    }
+      return
+    } 
   }, [type, showInstallPrompt])
 
   return (

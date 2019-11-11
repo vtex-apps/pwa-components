@@ -1,0 +1,15 @@
+query firebaseData {
+  vapidKeys {
+    publicKey
+  }
+
+  firebaseConfig {
+    appId
+    apiKey
+    authDomain
+    databaseURL
+    storageBucket
+    messagingSenderId
+    projectId
+  }
+}
