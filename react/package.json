@@ -20,7 +20,6 @@
     "vtex.styleguide": "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.styleguide@9.87.2/public/@types/vtex.styleguide"
   },
   "dependencies": {
-    "idb": "^4.0.5",
     "react": "^16.9.0",
     "react-intl": "2.8.0"
   }
