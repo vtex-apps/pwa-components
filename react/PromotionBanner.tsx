@@ -1,15 +1,12 @@
 import React, { FC, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { injectIntl, InjectedIntlProps, intlShape } from 'react-intl'
-import { useQuery } from 'react-apollo'
-
 // @ts-ignore
 import { Button } from 'vtex.styleguide'
-
+import PushNotificationButton from './PushNotificationButton'
 // @ts-ignore
 import { usePWA } from 'vtex.store-resources/PWAContext'
 
-import firebaseDataQuery from './graphql/firebaseData.graphql'
 
 const propTypes = {
   intl: intlShape,
@@ -34,18 +31,12 @@ const CONSTANTS = {
 
 type Props = PropTypes.InferProps<typeof propTypes>
 
-const useFirebase = () => {
-  const { data, loading, error } = useQuery(firebaseDataQuery)
-  return !loading && data && !error ? firebaseDataQuery : null
-}
-
 const PromotionBanner: FC<Props & InjectedIntlProps> = ({
   intl,
   type = 'install',
   onDismiss,
 }) => {
   const { showInstallPrompt = null } = usePWA() || {}
-  const { data, loading, error } = useQuery(firebaseDataQuery)
 
   const handleDismiss = useCallback(async () => {
     if (type === CONSTANTS.TYPE_INSTALL)
@@ -61,7 +52,7 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
     if (type === CONSTANTS.TYPE_INSTALL) {
       showInstallPrompt()
       return
-    } 
+    }
   }, [type, showInstallPrompt])
 
   return (
@@ -87,14 +78,16 @@ const PromotionBanner: FC<Props & InjectedIntlProps> = ({
           id: CONSTANTS.DISMISS_BUTTON_LABEL,
         })}
       </Button>
-      <Button onClick={handleAccept} size="small">
-        {intl.formatMessage({
-          id:
-            type === CONSTANTS.TYPE_INSTALL
-              ? CONSTANTS.INSTALL_ACCEPT_BUTTON_LABEL
-              : CONSTANTS.PUSH_NOTIFICATIONS_ACCEPT_BUTTON_LABEL,
-        })}
-      </Button>
+      {type == CONSTANTS.TYPE_PUSH_NOTIFICATION ? <PushNotificationButton>aa</PushNotificationButton> :
+        <Button onClick={handleAccept} size="small">
+          {intl.formatMessage({
+            id:
+              type === CONSTANTS.TYPE_INSTALL
+                ? CONSTANTS.INSTALL_ACCEPT_BUTTON_LABEL
+                : CONSTANTS.PUSH_NOTIFICATIONS_ACCEPT_BUTTON_LABEL,
+          })}
+        </Button>
+      }
     </div>
   )
 }
