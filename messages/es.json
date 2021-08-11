@@ -1,12 +1,12 @@
 {
-  "store/promotion-banner.button-dismiss.label": "Ahora no",
-  "store/promotion-banner.install.title": "Lleve un registro de sus pedidos",
-  "store/promotion-banner.install.description": "Nuestra aplicación es rápida, pequeña y funciona sin conexión",
-  "store/promotion-banner.install.button-accept.label": "Instalar",
-  "store/promotion-banner.push-notification.title": "Lleve un registro de sus pedidos",
-  "store/promotion-banner.push-notification.description": "Reciba notificaciones sobre el estado de sus pedidos",
-  "store/promotion-banner.push-notification.button-accept.label": "Aceptar",
-  "store/offline-warning.button": "Actualizar",
-  "store/offline-warning.message": "No se puede cargar esta página. Comprueba tu conexión de red",
-  "store/offline-warning.title": "Esta página no se puede cargar."
+  "store/promotion-banner.button-dismiss.label": "Not now",
+  "store/promotion-banner.install.title": "Keep track of your orders",
+  "store/promotion-banner.install.description": "Our app is fast, small, and works offline",
+  "store/promotion-banner.install.button-accept.label": "Install",
+  "store/promotion-banner.push-notification.title": "Keep track of your orders",
+  "store/promotion-banner.push-notification.description": "Receive notifications about your orders status",
+  "store/promotion-banner.push-notification.button-accept.label": "Accept",
+  "store/offline-warning.button": "Refresh",
+  "store/offline-warning.message": "Unable to load this page. Check your network connection",
+  "store/offline-warning.title": "This page cannot be loaded"
 }
